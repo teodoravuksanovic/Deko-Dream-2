@@ -541,7 +541,7 @@ input[type=submit], input[type=reset]{
     .usluge {
         flex-direction: column;
         align-items: center;
-        width: 60%;
+        width: 90%;
     }
 
     .dugmadi {
