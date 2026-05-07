@@ -154,7 +154,7 @@ function saznajVise(kategorija, indeks){
 function dodajNedavno(naziv){
     poslednjeUsluge.unshift(naziv);
 
-    if(poslednjeUsluge > 5){
+    if(poslednjeUsluge.length > 5){
         poslednjeUsluge.pop();
     }
 
