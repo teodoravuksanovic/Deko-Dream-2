@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deco Dream</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav class="meni">
+        <img class="logo" src="slike\logo_Deco_Dream.png" alt="logo">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+          <ul class="meni_linkovi">
+            <li><a href="index.html" class="dugme">Početna</a></li>
+            <li><a href="usluge.html" class="dugme">Usluge</a></li>
+            <li><a href="galerija.html" class="dugme">Galerija</a></li>
+            <li><a href="kontakt.html" class="dugme">Kontakt</a></li>
+          </ul>
+          <input type="text" id="unos" placeholder="Pretraži usluge..." onkeyup="Pretraga()">
+          <button class="dugme" id="obrisiPretragu" onclick="obrisiPretragu()">Obriši pretragu</button>
+          <button class="dugme" id="tamno" onclick="tamni_rezim()">Tamni režim</button>
+    </nav>
+</header>
+<main class="sadrzaj">
+<div class="usluge">
+    <h1><a href="#" onclick="prikaziUsluge('dekoracije', this)">
+        Dekoracije
+    </a></h1>
+    <h1><a href="#" onclick="prikaziUsluge('organizacija', this)">
+        Organizacija događaja
+    </a></h1>
+    <h1><a href="#" onclick="prikaziUsluge('fotoVideo', this)">
+        Fotografija i video
+    </a></h1>
+</div>
+
+<div id="detalji"></div>
+<div id="popupBox"></div>
+
+<div id="nedavnoPregledano" style="display:none;">
+<table>
+        <thead>
+            <tr>
+                <th>Nedavno pregledane usluge</th>
+            </tr>
+        </thead>
+        <tbody id="listaPregledanih"></tbody>
+    </table>
+</div>
+  
+<button class="dugme" id="nedavnoDugme" onclick="Nedavno()">Nedavno pregledane usluge</button>
+
+</main>
+<footer>
+  <p>Deco Dream</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="scriptPretraga.js"></script>
+<script src="scriptDark.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deco Dream</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="meni">
+        <img class="logo" src="slike\logo_Deco_Dream.png" alt="logo">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+          <ul class="meni_linkovi">
+            <li><a href="index.html" class="dugme">Početna</a></li>
+            <li><a href="usluge.html" class="dugme">Usluge</a></li>
+            <li><a href="galerija.html" class="dugme">Galerija</a></li>
+            <li><a href="kontakt.html" class="dugme">Kontakt</a></li>
+          </ul>
+          <button class="dugme" id="tamno" onclick="tamni_rezim()">Tamni režim</button>
+    </nav>
+</header>
+<main class="sadrzaj">
+<div class="hero-image">
+    <div class="hero-text">
+        <h1>Dobrodošli u Deco Dream</h1>
+        <p>Za sve vaše lepe trenutke!</p>
+        <div class="hero-button">
+          <a href="usluge.html" class="dugme" id="button">Usluge</a>
+        </div>
+    </div>
+</div>
+
+<div class="onama_galerija">
+<div class="info">
+    <h1>O nama</h1>
+    <p>Deco Dream pruža različite usluge dekorisanja, pravljenja aranžmana, organizacije događaja, fotografisanja i snimanja vašeg događaja. Cilj nam je da događaj napravimo po vašoj meri i učinimo ga nezaboravnim.  </p>
+</div>
+<div class="galerija_kontejner">
+    <div class="galerija_slideshow">
+        <img src="slike/slika1.jpg" id="slika">
+        
+        <a class="prev" onclick="sledece(-1)">&#10094;</a>
+        <a class="next" onclick="sledece(1)">&#10095;</a>
+    </div>
+
+    <br>
+
+    <div style="text-align:center">
+        <span class="tacka" onclick="trenutni_slajd(0)"></span> 
+        <span class="tacka" onclick="trenutni_slajd(1)"></span> 
+        <span class="tacka" onclick="trenutni_slajd(2)"></span>
+        <span class="tacka" onclick="trenutni_slajd(3)"></span>
+        <span class="tacka" onclick="trenutni_slajd(4)"></span>
+        <span class="tacka" onclick="trenutni_slajd(5)"></span>
+        <span class="tacka" onclick="trenutni_slajd(6)"></span>
+    </div>
+</div>
+</div>
+</main>
+<footer>
+  <p>Deco Dream</p>
+</footer>
+<script src="script_index.js"></script>
+<script src="scriptDark.js"></script>
+</body>
+</html>

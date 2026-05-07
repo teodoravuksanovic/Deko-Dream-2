@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deco Dream</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <nav class="meni">
+        <img class="logo" src="slike\logo_Deco_Dream.png" alt="logo">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+          <ul class="meni_linkovi">
+            <li><a href="index.html" class="dugme">Početna</a></li>
+            <li><a href="usluge.html" class="dugme">Usluge</a></li>
+            <li><a href="galerija.html" class="dugme">Galerija</a></li>
+            <li><a href="kontakt.html" class="dugme">Kontakt</a></li>
+          </ul>
+          <button class="dugme" id="tamno" onclick="tamni_rezim()">Tamni režim</button>
+    </nav>
+</header>
+
+<main class="sadrzaj">
+<h1 id="naslov_forma">Rezervišite!</h1>
+<div class="forma">
+  <form name="kontakt" id="kontakt" method="post" onsubmit="potvrdiFormu(event)" onreset="poruka_reset()">   
+    <input type="text" name="ime_prezime" placeholder="Ime i prezime">
+
+    <input type="email" name="email" placeholder="E-mail adresa">
+						
+    <input 
+    type="text" 
+    id="datum" 
+    placeholder="Izaberite datum događaja" 
+    onfocus="this.type='date'; this.showPicker()" 
+    onblur="if(!this.value) this.type='text'">
+
+    <select name="usluga">
+      <option value="" disabled selected hidden>Izaberite uslugu</option>
+      <option value="dekorisanje_svadbi">Dekorisanje svadbi i venčanja</option>
+      <option value="dekorisanje_rođendana">Dekorisanje rođendana</option>
+      <option value="dekorisanje_krštenja">Dekorisanje krštenja</option>
+      <option value="organizacija_svadbi">Organizacija svadbi i venčanja</option>
+      <option value="organizovanje_rođendana">Organizovanje rođendana</option>
+      <option value="organizovanje_krštenja">Organizovanje krštenja</option>
+      <option value="fotografisanje_novorođenčadi_trudnica">Fotografisanje novorođenčadi i trudnica</option>
+      <option value="fotografisanje_snimanje_dogadjaja">Fotografisanje i snimanje događaja</option>
+      <option value="tematsko_fotografisanje">Tematsko fotografisanje</option>
+    </select>
+
+    
+    <textarea name="opis" placeholder="Poruka"></textarea>
+    <div class="dugmadi">
+      <input type="submit" value="Pošalji" class="dugme">
+      <input type="reset" value="Obriši"class="dugme">
+    </div>
+  </form>
+  <div id="pregled"></div>
+</div>
+
+</main>
+<footer>
+  <p>Deco Dream</p>
+</footer>
+<script src="script2.js"></script>
+<script src="scriptDark.js"></script>
+</body>
+</html>
